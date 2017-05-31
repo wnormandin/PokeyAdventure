@@ -5,6 +5,8 @@ from .core import CHA_STATUS_EFFECTS
 from .core import CHA_SKILLS
 from .core import CHA_SIZES
 from .core import CHA_LANGUAGES
+from .core import GameObject
+from .core import stuple
 from .items import Torch
 
 # Player and NPC Race classes

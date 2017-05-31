@@ -10,13 +10,15 @@ from .core import CHA_SKILLS
 from .core import CHA_SIZES
 from .core import CHA_LANGUAGES
 from .core import INITIAL_STAT_SUM
+from .core import GameObject
+from .core import stuple
 from .weapons import Weapon # Superclasses for type comparisons
 from .armor import Armor    # ''    ''      ''      ''      ''
 from .items import Item     # ''    ''      ''      ''      ''
 
 # Player/NPC Classes
 
-class Character:
+class Character(GameObject):
 
     ''' Parent class for characters and NPCs '''
 
@@ -40,7 +42,7 @@ class Character:
 
     @property
     def position(self):
-        return self.y, self.x
+        return stuple((self.y, self.x))
 
     @position.setter
     def position(self, pos):

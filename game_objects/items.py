@@ -1,5 +1,8 @@
 
-class Item:
+from .core import GameObject
+
+
+class Item(GameObject):
 
     ''' Base class for items, weapons, and Armor '''
 
@@ -7,7 +10,8 @@ class Item:
     NORMAL_ITEM = 0
     LARGE_ITEM = 1
 
-    def __init__(self):
+    def __init__(self, pos=None):
+        self.pos = None
         self.weight = 0.1
         self.slots = 0      # Slots can hold other items
         self.size = Item.NORMAL_ITEM
